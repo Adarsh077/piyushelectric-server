@@ -1,36 +1,32 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
-const WorkSchema = new Schema({
-    title: {
-        type: String,
-	},
-	
-    date: {
-        type: String
-    }
-})
+const WorkSchema = require("./Schemas/Work");
+const AddressSchema = require("./Schemas/Address");
 
 const ClientsSchema = new Schema({
-	date:{
+	date: {
 		type: String,
+		required: true
 	},
 
 	name: {
 		type: String,
+		required: true
 	},
 
 	address: {
-		type: String,
+		type: AddressSchema,
+		required: true
 	},
 
-	mobileNo: {
+	mobile: {
 		type: Number,
+		required: true
 	},
 
 	work: {
 		type: [WorkSchema],
-        default: []
+		default: []
 	}
 })
 

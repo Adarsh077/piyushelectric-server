@@ -18,7 +18,10 @@ router.get('/', (req, res, next) => {
 router.post('/', (req, res, next) => {
 	clients
 		.create(req.body)
-		.then(client => res.send(client))
+		.then(client => {
+			console.log(client)
+			res.send(client)
+		})
 		.catch(next);
 });
 
