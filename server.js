@@ -14,10 +14,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use('/client', require('./Routes/clients'));
 
-app.get('/authorize', (req, res) => {
-	const { username, password } = req.body;
-	res.send(username === "kamlesh" && password === "kamlesh123");
-});
+app.post('/authenticate', (req, res) => res.send(req.body.password === "piyushele"));
 
 app.use((err, req, res, next) => res.send(err));
 
