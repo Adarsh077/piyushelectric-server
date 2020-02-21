@@ -1,5 +1,5 @@
 {
-  "name": "kamlesh_work",
+  "name": "piyushelectric-server",
   "version": "0.0.0",
   "description": "",
   "main": "server.js",
@@ -11,7 +11,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "author": "",
